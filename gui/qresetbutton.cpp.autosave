@@ -1,0 +1,13 @@
+#include "gui/qbutton.h"
+
+QButton::QButton( QWidget* parent) : QLabel(parent)
+{
+    setText("Try again!");//qresetbutton上显示Tey again
+    setAlignment(Qt::AlignCenter);
+    setStyleSheet("QResetButton { background-color: rgb(143,122,102); border-radius: 10px; font: bold; color: white; }");
+}
+
+void QButton::mousePressEvent(QMouseEvent* event)
+{
+    emit clicked();
+}
